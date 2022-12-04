@@ -61,7 +61,7 @@ if __name__ == '__main__':
     '''5.4.2'''
     e_ls = calc_ls_error(AA_=AA, y_obs_=y_obs)
     print("Check if e_ls is orthogonal to our estimation (A.c_ls). \n"
-          "Following condition must be fulfilled  \n\t<e_ls, (A.c_ls)> != 0\n"
+          "Following condition must be fulfilled  \n\t<e_ls, (A.c_ls)> == 0\n"
           "Computing result: \n\t<e_ls, (A.c_ls)> = {:.5e}\n"
           "This error is only a numerical calculation artifact \n"
           "\t-> e_ls is orthogonal to our estimation (A.c_ls)".format(np.inner(e_ls.T,np.matmul(AA,c_LS).T)[0][0]))

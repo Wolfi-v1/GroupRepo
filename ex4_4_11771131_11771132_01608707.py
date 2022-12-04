@@ -14,10 +14,10 @@ def generate_random_v_k(snr):
     :return: random normalized complex noise weighted with SNR
     '''
     snr_dec = 10**(snr/10)
-    sigma2 = 1/snr_dec
+    sigma = np.sqrt(1/snr_dec)
     vk = np.random.randn() + 1j * np.random.randn()
     # Normalization and weighting with SNR
-    return vk*sigma2/np.absolute(vk)
+    return vk*sigma/np.absolute(vk)
 
 def generate_random_h():
     '''
